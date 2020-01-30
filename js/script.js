@@ -1,4 +1,3 @@
-var songs = ["Erase Me", "Ghost Town", "444 + 222"];
 let eraseMe = {
   imageURL: "https://upload.wikimedia.org/wikipedia/en/0/0a/Kidcudimanonthemoonthelegendof.jpg",
   artist: "Kid Cudi",
@@ -19,3 +18,17 @@ let vert = {
   length: 407,
   songLink: "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiKhp2XgYfnAhWTpp4KHTyuCWoQ3ywwAHoECAYQAw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DEepkVbNveX0&usg=AOvVaw1YUgqJBjkAZg3PToBRr7wc"
 }
+
+$("#butt").click(function(){
+  let image = $('#image').val();
+  let title = $('#title').val();
+  let artist = $('#artist').val();
+  let length = $('#length').val();
+  let link = $('#link').val();
+
+  $(".cover").append(`<img src="${image}">`);
+  $(".titleParent").append(`<p class="title">${title}</p>`);
+  $(".artist").append(`<p class="title">${artist}</p>`);
+  $(".time").append(`<p class="title">${length}</p>`);
+  $(".links").append(`<div class="title"><a href="${link}">Listen</a></div>`);
+});
